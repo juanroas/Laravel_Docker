@@ -24,10 +24,10 @@ services:
      
  
     nginx:
-        build: .docker/nginx
+        build: .docker/nginx        
         user: root
         container_name: nginx         
-        entrypoint: dockerize -template ./.docker/app/nginx.conf:./.docker/nginx/nginx.conf
+        entrypoint: dockerize -template ./.docker/nginx/nginx_1.conf:./.docker/nginx/nginx.conf
         environment: 
             - PASS_HOST=app:9001
         restart: always
